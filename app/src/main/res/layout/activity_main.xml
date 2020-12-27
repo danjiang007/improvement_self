@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jiang.improvement.self.MainActivity">
+
+    <TextView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="要做的事\n
+        人生应当有计划的执行
+        步骤一是什么
+        步骤二是什么
+        执行的怎么样
+        谁来监督
+        首先有个闹钟
+        每天提醒一次
+        执行不力
+        每半天提醒一次
+        你看到啦哪些优秀的人
+        优秀的事
+        记录下来
+        写成代码上传网上
+       "
+
+        android:textSize="40dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
