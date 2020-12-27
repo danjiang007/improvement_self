@@ -1,1 +1,2 @@
+include ':debug'
 include ':app',  ':net_common', ':scheme'
