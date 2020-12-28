@@ -2,12 +2,16 @@ package com.jiang.improvement.self;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.jiang.improvement.R;
+import com.jiang.improvement.self.framgent.MainFragment;
 
 /**
  * 一个改造自我的App
@@ -16,26 +20,17 @@ import com.jiang.improvement.R;
  * 2.
  */
 public class MainActivity extends AppCompatActivity {
-    TextView mMainTextView;
+    MainFragment mMainFragment;
+    FragmentManager mFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mMainTextView = findViewById(R.id.main);
-
-        mMainTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("chicha://domain/path?goodsId=10011002"));
-                startActivity(intent);
-            }
-        });
-        
-        Thread thread = new Thread();
-
-        Thread.State state = thread.getState();
-//        HandlerThread
-
+        mMainFragment = new MainFragment();
+        mFragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.main_fragment, mMainFragment);
+        fragmentTransaction.commit();
     }
 }
